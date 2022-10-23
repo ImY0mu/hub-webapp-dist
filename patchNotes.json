@@ -2,6 +2,22 @@
   "notes": [
     {
       "title": "Update",
+      "version": "0.0.4",
+      "date": "2022-10-23T12:00:18.175Z",
+      "changes": [
+        { 
+          "title": "General", 
+          "items": [
+            "Added Discord Rich Presence",
+            "Added Dashboard",
+            "Added option to place item on market from within Travel item popup",
+            "Added basic keybinds"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Update",
       "version": "0.0.3",
       "date": "2022-10-22T12:40:18.175Z",
       "changes": [
