@@ -57,6 +57,25 @@ const getRequiredScripts = async (url) => {
   var script = "";
   if(url.includes('simple-mmo.com/')){
     script += `
+
+   try {
+    document.querySelector('nav.space-y-1.bg-white.mx-4.mb-8.mt-6').querySelectorAll('a')[document.querySelector('nav.space-y-1.bg-white.mx-4.mb-8.mt-6').querySelectorAll('a').length-1].remove();
+
+   } catch (error) {
+    console.log(error);
+   }
+
+    function fixLinks(){
+      var links = document.getElementsByTagName('a');
+      for(var i = 0; i < links.length; i++){
+        if(links[i].getAttribute('target') == '_blank'){
+          links[i].removeAttribute('target');
+        }
+      }
+    }
+
+    fixLinks();
+
     function keybind(key){
       var item = {
         type: "keybind",

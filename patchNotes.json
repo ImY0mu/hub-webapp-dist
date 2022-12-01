@@ -2,6 +2,26 @@
   "notes": [
     {
       "title": "Update",
+      "version": "0.0.5",
+      "date": "2022-12-01T12:00:18.175Z",
+      "changes": [
+        { 
+          "title": "General", 
+          "items": [
+            "Removed logout option -> use another account for another account",
+            "Bot verification now opens in a new tab"
+          ]
+        },
+        { 
+          "title": "Bugs", 
+          "items": [
+            "Fixed tab events triggering even when tab did not exist anymore"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Update",
       "version": "0.0.4",
       "date": "2022-10-23T12:00:18.175Z",
       "changes": [
