@@ -2,6 +2,19 @@
   "notes": [
     {
       "title": "Update",
+      "version": "0.0.7",
+      "date": "2022-12-06T12:30:18.175Z",
+      "changes": [
+        { 
+          "title": "Bugs", 
+          "items": [
+            "Fixed page url not updating when going back/forward in history"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Update",
       "version": "0.0.6",
       "date": "2022-12-01T12:30:18.175Z",
       "changes": [
