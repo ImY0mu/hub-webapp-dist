@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if(event.data.type == "keybind"){
       sendToWindow('keybind', event.data.key)
     }
+    if(event.data.type == "clickAway"){
+      sendToWindow('clickAway')
+    }
+    if(event.data.type == "authentication"){
+      sendToWindow('authentication', event.data.token)
+    }
+    if(event.data.type == "logout"){
+      sendToWindow('logout')
+    }
   });
   //END OF LOAD
 })
@@ -84,6 +93,28 @@ const getRequiredScripts = async (url) => {
       window.postMessage(item);
     }
 
+    function authentication(){
+      fetch('https://web.simple-mmo.com/api/token?')
+      .then(response => response.json())
+      .then((data) => {
+        if(data.api_token != null) {
+          var item = {
+            type: "authentication",
+            token: data.api_token
+          }
+          return window.postMessage(item);
+        }
+          
+        var item = {
+          type: "logout"
+        }
+        return window.postMessage(item);
+      });
+
+    }
+
+    authentication();
+
     var keyBindListener = function (e){
       var pressedKey = "";
       if(e.type == "mousedown"){
@@ -119,7 +150,14 @@ const getRequiredScripts = async (url) => {
         if((e.key.startsWith('F') && e.key != "F") || e.key == 'Escape' || e.key == 'Backspace' || e.key.startsWith('Arrow')) self.keyBindListener(e);
 
       }, false);
-      window.addEventListener('mousedown', this.keyBindListener, false);
+      window.addEventListener('mousedown', function(e){
+        var item = {
+          type: "clickAway"
+        }
+        return window.postMessage(item);
+
+        this.keyBindListener(e);
+      }, false);
       
     }
     catch (error) {

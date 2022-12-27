@@ -2,6 +2,20 @@
   "notes": [
     {
       "title": "Update",
+      "version": "0.0.8",
+      "date": "2022-12-27T12:00:18.175Z",
+      "changes": [
+        { 
+          "title": "General", 
+          "items": [
+            "Added system to prevent the user from signing in with different account than the one currently being used at App Hub",
+            "Added basic bookmarks - will improve in future (custom names)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Update",
       "version": "0.0.7",
       "date": "2022-12-06T12:30:18.175Z",
       "changes": [
