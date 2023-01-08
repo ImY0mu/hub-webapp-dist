@@ -810,32 +810,6 @@ const getRequiredScriptsAfter = async (url) => {
   var script = "";
   if(url.includes('simple-mmo.com/')){
     script += `
-    function app(){
-      if(!this||this==window)return new app;
-      var o=function(){return"thanks for calling!"};
-      return o.__proto__=app.prototype,o.constructor=app,o}
-      app.prototype={
-        openScrollableTabPage:function(title, menu){requiredAppFunction(title, menu);},
-        openFixedTabPage:function(title, menu){requiredAppFunction(title, menu);},
-      __proto__:Function.prototype
-    },app=new app;
-
-
-    
-    function requiredAppFunction(title, menu){
-      try{
-        console.log(JSON.parse(menu));
-      }
-      catch(e){
-        console.log(menu);
-      }
-      
-      let item = {
-        type: "openPageWithSubMenu", 
-        title: title, menu: menu
-      }; 
-      window.postMessage(item);
-    }
     `;
   }
   return script;
