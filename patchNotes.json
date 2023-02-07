@@ -2,6 +2,19 @@
   "notes": [
     {
       "title": "Update",
+      "version": "0.0.10",
+      "date": "2023-02-07T12:00:18.175Z",
+      "changes": [
+        { 
+          "title": "Bugs", 
+          "items": [
+            "Fixed some links not being opened in the default browser"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Update",
       "version": "0.0.9",
       "date": "2023-01-08T12:00:18.175Z",
       "changes": [
