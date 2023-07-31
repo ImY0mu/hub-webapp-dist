@@ -2,6 +2,19 @@
   "notes": [
     {
       "title": "Update",
+      "version": "0.0.11",
+      "date": "2023-07-31T12:00:18.175Z",
+      "changes": [
+        { 
+          "title": "General", 
+          "items": [
+            "Updated to work with App Hub 1.0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Update",
       "version": "0.0.10",
       "date": "2023-02-07T12:00:18.175Z",
       "changes": [
